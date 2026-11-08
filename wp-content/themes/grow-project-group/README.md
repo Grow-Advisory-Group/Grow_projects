@@ -14,3 +14,8 @@ Design and editorial copy currently live in `templates/content/*.php`. General W
 
 ## Publication gates
 Artistic concepts and third-party reference images are not approved marketing photography. Confirm licences, approvals and project naming before public use.
+## Edit content and imagery through WordPress
+- Pages: add content with the native WordPress block editor. Any non-empty page content takes precedence over the bundled page template. Clear editor content to restore the designed template.
+- Featured Image: assign a featured image to a project page to replace its main hero image, where present. Home page supports the same mechanism.
+- For exact design preservation, update theme PHP templates rather than replacing them with generic blocks.
+- The enquiry form is demonstration-only and does not send data. Configure an approved WordPress form plugin separately when authorised.
