@@ -1,6 +1,6 @@
 <main id="main">
 <section class="capital-hero">
-<div class="capital-hero-media"><img alt="Illustrative architectural concept for a proposed Adelaide hotel and residential tower" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/75-king-william-concept.jpg' ); ?>"/></div>
+<div class="capital-hero-media"><img alt="Illustrative architectural concept for a proposed Adelaide hotel and residential tower" src="<?php echo esc_url( get_the_post_thumbnail_url( get_queried_object_id(), "full" ) ?: get_template_directory_uri() . "/assets/images/75-king-william-concept.jpg" ); ?>"/></div>
 <div class="capital-hero-overlay"></div>
 <div class="capital-hero-inner container">
 <div class="capital-hero-copy">

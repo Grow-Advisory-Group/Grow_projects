@@ -1,0 +1,14 @@
+name: WordPress theme QA
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  theme-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: PHP syntax
+        run: find wp-content/themes/grow-project-group -name '*.php' -print0 | xargs -0 -n1 php -l
+      - name: Check theme paths
+        run: python3 scripts/check-theme.py

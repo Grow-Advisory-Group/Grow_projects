@@ -2,7 +2,7 @@
 /** Grow Project Group: static brochure theme, no custom backend. */
 if (!defined('ABSPATH')) { exit; }
 function gpg_theme_setup() {
- add_theme_support('title-tag'); add_theme_support('post-thumbnails'); add_theme_support('html5', array('search-form','gallery','caption','style','script'));
+ add_theme_support('title-tag'); add_theme_support('post-thumbnails'); add_theme_support('editor-styles'); add_theme_support('html5', array('search-form','gallery','caption','style','script'));
 }
 add_action('after_setup_theme','gpg_theme_setup');
 function gpg_theme_assets() {
@@ -27,3 +27,8 @@ function gpg_seed_pages() {
  flush_rewrite_rules();
 }
 add_action('after_switch_theme','gpg_seed_pages');
+/** Use native WordPress page blocks when supplied, otherwise retain the designed theme layout. */
+function gpg_has_editor_content($post_id) {
+ $raw = get_post_field('post_content', $post_id);
+ return is_string($raw) && trim($raw) !== '';
+}
