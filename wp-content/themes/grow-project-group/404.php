@@ -1,0 +1,1 @@
+<?php get_header(); ?><main id="main" class="container section"><h1>Page not found</h1><p>This page is not available.</p><a class="capital-button" href="<?php echo esc_url(home_url('/')); ?>">Return home</a></main><?php get_footer(); ?>
